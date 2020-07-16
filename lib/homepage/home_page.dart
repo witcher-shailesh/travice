@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
       ),
       SizedBox(height:20),
       Container(
+
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         alignment: Alignment.center,
@@ -37,6 +38,22 @@ class _HomePageState extends State<HomePage> {
         ),
         child: ServiceHomePage(),
       ),
+      // Container(
+      //   padding: EdgeInsets.symmetric(vertical:20,horizontal:10),
+      //   margin: EdgeInsets.all(10),
+      //   decoration: BoxDecoration(
+      //     color: Colors.white,
+      //     borderRadius: BorderRadius.circular(20),
+      //     boxShadow: [
+      //       BoxShadow(
+      //         color:Colors.grey.shade200,
+      //         blurRadius: 20,
+      //         spreadRadius: 10,
+      //         offset: Offset(10, 10)
+      //       )
+      //     ]
+      //   ),
+      //   child: ServiceHomePage()),
       Row(
         children: [
           Expanded(child: Container(
