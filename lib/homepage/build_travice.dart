@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travice/pages/settings/settings.dart';
 
 import 'home_page.dart';
 
@@ -13,7 +14,7 @@ class _BuildTraviceState extends State<BuildTravice> {
     HomePage(),
     Center(child: Text("message"),),
     Center(child: Text("locate"),),
-    Center(child: Text("settings"),),
+    Settings(),
 
   ];
   void ontap(int index){
@@ -53,10 +54,10 @@ class _BuildTraviceState extends State<BuildTravice> {
         items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text("home")),
+          title: Text("tractor")),
         BottomNavigationBarItem(
           icon: Icon(Icons.message),
-          title: Text("message")),
+          title: Text("khaad/seeds")),
         
         BottomNavigationBarItem(
           icon: Icon(Icons.pin_drop),

@@ -117,27 +117,27 @@ List<ServiceContainers> serviceContainer =[
   ServiceContainers(
     imgPath: "asset/img0.png",
     serviceName: "General Service",
-    serviceImg: "gService.jpg",
+    serviceImg: "asset/serviceImages/gService.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img1.png",
     serviceName: "Greasing",
-    serviceImg: "greasing.jpg",
+    serviceImg: "asset/serviceImages/greasing.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img2.png",
     serviceName: "Damage Repair",
-    serviceImg: "damageRepair.jpg",
+    serviceImg: "asset/serviceImages/damageRepair.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img3.png",
     serviceName: "Check Up",
-    serviceImg: "checkUp.jpg",
+    serviceImg: "asset/serviceImages/checkUp.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img3.png",
     serviceName: "Accessories",
-    serviceImg: "accessories.jpg",
+    serviceImg: "asset/serviceImages/accessories.jpg",
     ),
   
   

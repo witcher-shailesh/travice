@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "729095149352",
+    "firebase_url": "https://travice-77997.firebaseio.com",
+    "project_id": "travice-77997",
+    "storage_bucket": "travice-77997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729095149352:android:77bb484ce374ede477e21d",
+        "android_client_info": {
+          "package_name": "com.example.travice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729095149352-ua5cmfefhrvegn4behspsvn3klc4dncm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA4GKu1GX6VjPfO72dIfH-yxe5DhwskVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729095149352-ua5cmfefhrvegn4behspsvn3klc4dncm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

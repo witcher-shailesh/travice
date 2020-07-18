@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
+import 'package:travice/authentication/auth.dart';
+import 'package:travice/models/user_model.dart';
+import 'package:travice/wrapper/wrapper.dart';
 import 'homepage/build_travice.dart';
 
 
@@ -18,6 +23,7 @@ class TraviceInherited extends InheritedWidget{
 }
 
 
+
 void main() {
   runApp(MyApp());
 }
@@ -25,20 +31,34 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+    return StreamProvider<User>.value(
+      value: AuthService().user,
+          child: MaterialApp(
+        supportedLocales: [
+          Locale('en','US'),
+          Locale('hi','IN')
+        ],
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+        ],
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          
+          accentColor: Colors.red
+        ),
+        title: "travice",
         
-        accentColor: Colors.red
-      ),
-      title: "travice",
-      
-      home: TraviceInherited(
-        child: BuildTravice(),
+        home: Wrapper(),
       ),
     );
   }
 }
+
+// home: TraviceInherited(
+//         child: BuildTravice(),
+//       ),
 
 
 
