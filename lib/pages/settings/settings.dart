@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travice/authentication/auth.dart';
+import 'package:travice/serverSide/authentication/auth.dart';
 
 class Settings extends StatefulWidget {
   @override
