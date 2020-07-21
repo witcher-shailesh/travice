@@ -11,5 +11,11 @@ class DataService{
       'Customer_Address': address
     });
   } 
+  Future checkIfUserIsRegistered()async{
+    if(await referenceCollection.document(uid).get()==null){
+      return true;
+    }
+    return false;
+  }
 
 }

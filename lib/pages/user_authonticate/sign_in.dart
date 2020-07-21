@@ -12,6 +12,7 @@ class _SignInState extends State<SignIn> {
   AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   final _numberController = TextEditingController();
+  bool loading=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,7 @@ class _SignInState extends State<SignIn> {
         body: SafeArea(
           child:ListView(
                     children: [
-                      Form(
+                      loading==false?Form(
                         key: _formKey,
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -113,11 +114,16 @@ class _SignInState extends State<SignIn> {
                             GestureDetector(
                                 onTap: ()async{
                                   if(_formKey.currentState.validate()){ 
-                                    Loading();  
+                                    setState(() {
+                                      loading=true;
+                                    });
                                     final pnumber = "+91"+_numberController.text;
                                     await _auth.signInUsingPhone(pnumber, context);  
                                                                     
                                   }else{
+                                    setState(() {
+                                      loading=false;
+                                    });
                                     print("incorrect");                               
                                   } 
                                  },
@@ -147,7 +153,7 @@ class _SignInState extends State<SignIn> {
                             
                           ],
                         ),
-                      )                  
+                      ) : Loading(),                 
                     ]
               )
         ),

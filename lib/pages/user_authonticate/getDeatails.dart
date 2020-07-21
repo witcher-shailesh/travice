@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travice/pages/homepage/home_page.dart';
 
 class GetDetails extends StatefulWidget {
   @override

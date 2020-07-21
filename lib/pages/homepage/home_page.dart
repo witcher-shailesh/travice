@@ -57,20 +57,3 @@ class _HomePageState extends State<HomePage> {
 
 
 
-
-// Container(
-      //   padding: EdgeInsets.symmetric(vertical:20,horizontal:10),
-      //   margin: EdgeInsets.all(10),
-      //   decoration: BoxDecoration(
-      //     color: Colors.white,
-      //     borderRadius: BorderRadius.circular(20),
-      //     boxShadow: [
-      //       BoxShadow(
-      //         color:Colors.grey.shade200,
-      //         blurRadius: 20,
-      //         spreadRadius: 10,
-      //         offset: Offset(10, 10)
-      //       )
-      //     ]
-      //   ),
-      //   child: ServiceHomePage()),

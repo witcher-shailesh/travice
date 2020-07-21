@@ -39,7 +39,7 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         ),
         
         Container(
-          width: 80,
+          width: MediaQuery.of(context).size.width/3-40,
           margin: EdgeInsets.all(10),
           child: Column(
             children: [
@@ -87,11 +87,12 @@ class ServiceContainer extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-      width: 90,
+      width: MediaQuery.of(context).size.width/3-40,
       margin: EdgeInsets.all(10),
       child:Column(
         children: [
           Image.asset(service.imgPath,height: 50,width: 50,),
+          SizedBox(height:10),
           Text(service.serviceName,textAlign: TextAlign.center,),
           ],
         )

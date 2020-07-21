@@ -1,8 +1,6 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:travice/main.dart';
-import 'package:travice/pages/homepage/build_travice.dart';
 import 'package:travice/pages/loading/loading.dart';
 import 'package:travice/serverSide/models/user_model.dart';
 
@@ -51,7 +49,6 @@ Future signout() async{
     return null;
   }
 }
-final _codeController = TextEditingController();
 //signin using number
 Future signInUsingPhone(String phn ,BuildContext context)async{
   // final user = Provider.of<User>(context);
@@ -72,26 +69,13 @@ Future signInUsingPhone(String phn ,BuildContext context)async{
     print("verification failed");
   };
   final PhoneCodeAutoRetrievalTimeout autoRetrieval = (String verID){
-
   };
-
-  
-  
-
   await _auth.verifyPhoneNumber(
     phoneNumber: phn,
     timeout: const Duration(seconds:60),
     verificationCompleted: verificationCompleted,
     verificationFailed: verificationFailed,
     codeSent: (String verId,[int forceResendingToken]){
-        print(user);
-        print(user);
-        //while(user==null)
-        // showDialog(
-        // context: context,
-        // barrierDismissible: false,
-        // builder: (context){
-        //   return 
         Scaffold(
                       body: Column(
                 children: [
@@ -99,31 +83,10 @@ Future signInUsingPhone(String phn ,BuildContext context)async{
                   
                   Text("Loading"),
 
-                //   TextField(
-                //     controller: _codeController
-                //   ),
-                //   RaisedButton(
-                //   onPressed: ()async{
-                //     final code = _codeController.text;
-                //     AuthCredential credential = PhoneAuthProvider.getCredential(verificationId: verId, smsCode: code);
-                //     AuthResult result = await _auth.signInWithCredential(credential);
-                    
-                //     FirebaseUser user = result.user;
-                //     if(user!=null){
-                //       Navigator.of(context).pop();
-                //       return _userFromFirebase(user);
-                //     }else{                 
-                //     }
-                //   },
-                //   child:Text("Confirm"),
-                // )
+                
                 ],
             ),
           );
-       //}
-      //);
-      
-      
     },
     codeAutoRetrievalTimeout: autoRetrieval);
   }

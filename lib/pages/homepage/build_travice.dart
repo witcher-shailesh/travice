@@ -32,6 +32,11 @@ class _BuildTraviceState extends State<BuildTravice> {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
     DataService dataService = DataService(uid:user.uid);
+    
+    // if(){
+    //   print("null");
+    // }
+    print(dataService.checkIfUserIsRegistered());
     print(user.uid);
     return Scaffold(
       appBar: AppBar(
