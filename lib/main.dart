@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:travice/serverSide/authentication/auth.dart';
+import 'package:travice/serverSide/database/database.dart';
 import 'package:travice/serverSide/models/user_model.dart';
 import 'package:travice/wrapper/wrapper.dart';
 
@@ -51,7 +53,9 @@ class MyApp extends StatelessWidget {
         ),
         title: "travice",
         
-        home: Wrapper(),
+        home: StreamProvider<QuerySnapshot>.value(
+          value: DataService().users,
+          child: Wrapper()),
       ),
     );
   }
