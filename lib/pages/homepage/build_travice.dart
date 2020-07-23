@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:travice/pages/settings/settings.dart';
+import 'package:travice/serverSide/database/database.dart';
+import 'package:travice/serverSide/models/user_model.dart';
 import 'home_page.dart';
 
 class BuildTravice extends StatefulWidget {
@@ -26,6 +29,9 @@ class _BuildTraviceState extends State<BuildTravice> {
 
   @override
   Widget build(BuildContext context) {
+    final user = Provider.of<User>(context);
+     
+    DataService dataService = DataService(uid:user.uid);
     return Scaffold(
         appBar: AppBar(
     elevation: 0,
@@ -66,7 +72,7 @@ class _BuildTraviceState extends State<BuildTravice> {
     
         ),
         floatingActionButton: FloatingActionButton(onPressed: (){
-          
+          dataService.updateOrder("orderId888888888888");
         },
         child: Icon(Icons.phone)),
         

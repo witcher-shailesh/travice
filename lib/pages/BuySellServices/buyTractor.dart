@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:travice/serverSide/database/database.dart';
+import 'package:travice/serverSide/models/user_model.dart';
 
-class BuyTractor extends StatelessWidget {
+class BuyTractor extends StatefulWidget {
+  @override
+  _BuyTractorState createState() => _BuyTractorState();
+}
+
+class _BuyTractorState extends State<BuyTractor> {
   final _formK = GlobalKey<FormState>();
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   final _nameController = TextEditingController();
+
   final _addressController = TextEditingController();
+
   final _gaonController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    final user = Provider.of<User>(context);
+     
+    DataService dataService = DataService(uid:user.uid);
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
           centerTitle: true,
           title: Text("Buy Tractor"),
@@ -150,7 +167,15 @@ class BuyTractor extends StatelessWidget {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: (){
           if(_formK.currentState.validate()){
-          //dataService.updateUserData(_nameController.text, _addressController.text,_gaonController.text);
+          dataService.placeQueryDetail(_nameController.text, _addressController.text,_gaonController.text);
+         
+          _scaffoldKey.currentState
+                      .showSnackBar(SnackBar(
+                        backgroundColor: Colors.red,
+                        content: Text('Request Send')));
+          Future.delayed(const Duration(milliseconds: 2500), () {
+            Navigator.of(context).pop();
+          });
           print("correct");
           }else{
             print("false details");

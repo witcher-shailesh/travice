@@ -19,7 +19,7 @@ class ServiceProviderPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Container(//SERVICE IMAGE
+    Container(//SERVICE IMAGE
             margin: EdgeInsets.symmetric(horizontal:10 ,vertical: 15),
             width: double.infinity,
             height: MediaQuery.of(context).size.height/4,
@@ -36,33 +36,33 @@ class ServiceProviderPage extends StatelessWidget {
               ]
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
-              //image: DecorationImage(image: AssetImage(service.serviceImg),fit: BoxFit.cover),
-              boxShadow: [
-                BoxShadow(
-                  color:Colors.grey.shade200,
-                  blurRadius: 10,
-                  spreadRadius: 5,
-                  offset: Offset(1, 3),
-                )
-              ]
-            ),
-            child: Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              children:[
-                GeneralFeatures(headLine: "Go Digital",subHeadline: "Convenient online payment options.",),
-                GeneralFeatures(headLine: "Our Promise",subHeadline: "100% satisfaction options."),
-                GeneralFeatures(headLine: "Expert Service",subHeadline: "Skilled machanics for your every need."),
-                GeneralFeatures(headLine: "Service At Home ",subHeadline: "Service from the comfort of your home/farm."),
+          // Container(
+          //   padding: EdgeInsets.all(10),
+          //   margin: EdgeInsets.all(10),
+          //   decoration: BoxDecoration(
+          //     color: Colors.white,
+          //     borderRadius: BorderRadius.circular(25),
+          //     //image: DecorationImage(image: AssetImage(service.serviceImg),fit: BoxFit.cover),
+          //     boxShadow: [
+          //       BoxShadow(
+          //         color:Colors.grey.shade200,
+          //         blurRadius: 10,
+          //         spreadRadius: 5,
+          //         offset: Offset(1, 3),
+          //       )
+          //     ]
+          //   ),
+          //   child: Wrap(
+          //     alignment: WrapAlignment.spaceBetween,
+          //     children:[
+          //       GeneralFeatures(headLine: "Go Digital",subHeadline: "Convenient online payment options.",),
+          //       GeneralFeatures(headLine: "Our Promise",subHeadline: "100% satisfaction options."),
+          //       GeneralFeatures(headLine: "Expert Service",subHeadline: "Skilled machanics for your every need."),
+          //       GeneralFeatures(headLine: "Service At Home ",subHeadline: "Service from the comfort of your home/farm."),
                 
-              ]
-            ),
-            ),
+          //     ]
+          //   ),
+          //   ),
           
         ],
       ), 

@@ -44,7 +44,8 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
           child: Column(
             children: [
               IconButton(icon: Icon(Icons.arrow_downward),onPressed: (){},iconSize: 35,),
-              Text("more",textAlign: TextAlign.center,),
+              SizedBox(height: 10,),
+              Text("see all",textAlign: TextAlign.center,),
             ],
           ),
         ),
@@ -57,15 +58,8 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
     return PageRouteBuilder(pageBuilder: (context,animation,
         secondaryAnimation) => ServiceProviderPage(service: service,),
         transitionsBuilder:(context, animation, secondaryAnimation, child) {
-            // var begin = Offset(0.0, 1.0);
-            // var end = Offset.zero;
-            // var curve = Curves.ease;
-
-            // = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-
             return SizeTransition(
               sizeFactor: animation,
-              //position: animation.drive(tween),
               child: child,
             );
           },
@@ -122,22 +116,22 @@ List<ServiceContainers> serviceContainer =[
     ),
   ServiceContainers(
     imgPath: "asset/img1.png",
-    serviceName: "Greasing",
+    serviceName: "Damage Work",
     serviceImg: "asset/serviceImages/greasing.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img2.png",
-    serviceName: "Damage Repair",
+    serviceName: "Engine Work",
     serviceImg: "asset/serviceImages/damageRepair.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img3.png",
-    serviceName: "Check Up",
+    serviceName: "Electric Work",
     serviceImg: "asset/serviceImages/checkUp.jpg",
     ),
   ServiceContainers(
     imgPath: "asset/img3.png",
-    serviceName: "Accessories",
+    serviceName: "Other Work",
     serviceImg: "asset/serviceImages/accessories.jpg",
     ),
   
